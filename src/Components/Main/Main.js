@@ -1,5 +1,8 @@
 import React from 'react';
+import { fetchPokemon } from '../../services/pokefetch';
 
 export default function Main() {
-  return <main>Main</main>;
+  return <main>
+    { fetchPokemon() }
+  </main>;
 }
