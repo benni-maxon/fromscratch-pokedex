@@ -1,3 +1,4 @@
+![wireframe](/src/component-wireframe.png)
 
 #### State
     [ pokemon, setPokemon ]
