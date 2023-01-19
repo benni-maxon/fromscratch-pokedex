@@ -1,14 +1,13 @@
 import React from 'react';
 import { usePokemon } from '../../hooks/pokehook';
+import PokeCard from '../PokeCard/PokeCard.js';
 
 export default function Main() {
   const pokemon = usePokemon();
   return (
     <main>
       {pokemon.map((poke) => (
-        <p key={poke._id}>
-          {poke.pokemon} / {poke.type_1} / {poke.hp}
-        </p>
+        <PokeCard key={poke._id} {...poke} />
       ))}
     </main>
   );
