@@ -3,17 +3,17 @@ import { useState } from 'react';
 import { fetchPokemon } from '../services/pokefetch';
 
 export function usePokemon() {
-  const [pokemon, setPokemon] = useState();
+  const [pokemon, setPokemon] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
-        // load our pokemon
+      // load our pokemon
       const resp = await fetchPokemon();
-        // set out pokemon state
+      // set out pokemon state
       setPokemon(resp);
     };
     fetchData();
   }, []);
 
   return pokemon;
-} 
+}
