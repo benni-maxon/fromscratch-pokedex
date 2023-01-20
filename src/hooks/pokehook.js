@@ -28,6 +28,8 @@ export function usePokemon() {
 
   const handleTypeChange = async (type) => {
     console.log('changing type!', type);
+    const resp = await fetchPokemon(type);
+    setPokemon(resp);
   };
 
   return { pokemon, types, handleTypeChange };

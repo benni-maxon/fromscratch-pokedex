@@ -8,6 +8,7 @@ export default function Main() {
   return (
     <main>
       <Controls />
+      {/* we might need to do the mapping inside of PokeCard itself! */}
       {pokemon.map((poke) => (
         <PokeCard key={poke._id} {...poke} />
       ))}
