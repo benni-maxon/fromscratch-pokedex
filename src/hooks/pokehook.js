@@ -36,7 +36,7 @@ export function usePokemon() {
     const resp = await fetchPokemonByType(type);
     setPokemon(resp);
     // setSelectedType(type);
-    // console.log('pokemon', pokemon);
+    console.log('pokemon', pokemon);
     // console.log('selectedType', selectedType);
     setLoading(false);
   };
