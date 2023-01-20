@@ -3,10 +3,10 @@ import { usePokemon } from '../../hooks/pokehook';
 import Select from '../Select/Select';
 
 export default function Controls() {
-  const { types } = usePokemon();
+  const { types, handleTypeChange } = usePokemon();
   return (
     <div>
-      <Select types={ types } />
+      <Select {...{ types, handleTypeChange }} />
     </div>
   );
 }

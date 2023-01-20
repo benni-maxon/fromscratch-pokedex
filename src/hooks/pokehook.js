@@ -18,13 +18,17 @@ export function usePokemon() {
 
   useEffect(() => {
     const fetchData = async () => {
-      // load our types 
+      // load our types
       const resp = await fetchTypes();
       // set our type state
       setTypes(resp);
     };
     fetchData();
   }, []);
-  
-  return { pokemon, types };
+
+  const handleTypeChange = async (type) => {
+    console.log('changing type!', type);
+  };
+
+  return { pokemon, types, handleTypeChange };
 }
