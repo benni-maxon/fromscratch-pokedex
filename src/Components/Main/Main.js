@@ -1,14 +1,13 @@
 import React from 'react';
 import { usePokemon } from '../../hooks/pokehook';
-// import Controls from '../Controls/Controls';
+import Controls from '../Controls/Controls';
 import PokeCard from '../PokeCard/PokeCard.js';
-import Select from '../Select/Select';
 
 export default function Main() {
-  const { pokemon, types } = usePokemon();
+  const { pokemon } = usePokemon();
   return (
     <main>
-      <Select types={types}/>
+      <Controls />
       {pokemon.map((poke) => (
         <PokeCard key={poke._id} {...poke} />
       ))}
