@@ -13,5 +13,3 @@
 ## controls.js
     - select.js
 ## pokeCard.js
-
-small change :) 
