@@ -4,11 +4,10 @@ import Controls from '../Controls/Controls';
 import PokeCard from '../PokeCard/PokeCard.js';
 
 export default function Main() {
-  const { pokemon } = usePokemon();
+  const { pokemon, types, handleTypeChange } = usePokemon();
   return (
     <main>
-      <Controls />
-      {/* we might need to do the mapping inside of PokeCard itself! */}
+      <Controls {...{ types, handleTypeChange }} />
       {pokemon.map((poke) => (
         <PokeCard key={poke._id} {...poke} />
       ))}
