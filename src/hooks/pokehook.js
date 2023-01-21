@@ -5,8 +5,8 @@ import { fetchPokemon, fetchPokemonByType, fetchTypes } from '../services/pokefe
 export function usePokemon() {
   const [pokemon, setPokemon] = useState([]);
   const [types, setTypes] = useState([]);
-  // const [selectedType, setSelectedType] = useState('');
   const [loading, setLoading] = useState(true);
+  // const [selectedType, setSelectedType] = useState('');
 
   useEffect(() => {
     setLoading(true);
@@ -32,12 +32,8 @@ export function usePokemon() {
 
   const handleTypeChange = async (type) => {
     setLoading(true);
-    // console.log('changing type!', type);
     const resp = await fetchPokemonByType(type);
     setPokemon(resp);
-    // setSelectedType(type);
-    console.log('pokemon', pokemon);
-    // console.log('selectedType', selectedType);
     setLoading(false);
   };
 
