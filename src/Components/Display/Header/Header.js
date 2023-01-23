@@ -1,5 +1,6 @@
 import React from 'react';
+import './Header.css';
 
 export default function Header() {
-  return <header>Header</header>;
+  return <header className="pokeheader">Pokedex</header>;
 }
