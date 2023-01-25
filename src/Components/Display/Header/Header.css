@@ -1,0 +1,14 @@
+.pokeheader {
+  background-color: rgb(211, 87, 87);
+  height: 80px;
+  font-size: 3em;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  width: 40px;
+}
