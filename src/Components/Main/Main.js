@@ -7,7 +7,11 @@ import './Main.css';
 export default function Main() {
   const { pokemon, types, loading, handleTypeChange } = usePokemon();
   if (loading === true) {
-    return <h2>Loading...</h2>;
+    return (
+      <main className="main-area-loading">
+        <h2>Loading...</h2>;
+      </main>
+    );
   } else {
     return (
       <main className="main-area">

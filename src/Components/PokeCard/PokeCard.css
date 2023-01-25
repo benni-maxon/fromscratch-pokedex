@@ -28,7 +28,12 @@
 }
 
 .species-id {
-  margin-top: 70px;
-  margin-left: 10px;
+  margin-top: 67px;
+  margin-left: 3px;
+  padding: 3px;
   display: flex;
+  border: solid 2px black;
+  border-radius: 15px;
+  width: fit-content;
+  background-color: rgb(231, 194, 145);
 }
